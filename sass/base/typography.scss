@@ -1,0 +1,40 @@
+.bg-primary{
+    background-image:linear-gradient(141deg,#3588ffa6 0%, #3311ef38 51%, #002bff00 75%);
+}
+.heading1{
+    font-weight: 700 !important;
+}
+.heading3{
+    font-weight: 400 !important;
+}
+.p1{
+    font-weight: 400;
+}
+
+.brands-icons{
+    margin-top:60px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    
+    @include respond(phone){
+        flex-direction: column;  
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.brands-icons .fab{
+      font-size:400%;
+
+      @include respond(phone){
+      font-size: 400%;
+        margin-bottom: 30px;
+        display: block;
+      }
+}
+.gray-bg{
+    background-color: #f3f3f3;
+}
+
+

@@ -2,7 +2,7 @@
     width:100%;
 }
 .footer-header{
-background-color:#0069ff;
+background-color:$color-primary;
 width:100%;
 padding:9px 0;
 }
@@ -18,8 +18,7 @@ padding:9px 0;
     justify-content: space-between;
     align-items: center;
     margin-bottom:12px;
-    
-    color:#fff;
+    color:$color-white;
 }
 .social-icons .fab{
     width:40px;
@@ -29,6 +28,16 @@ padding:9px 0;
     background-color: #333;
     height:40px;
     border-radius: 50%;
+    font-size:120%;
+}
+.fa-search{
+    @include respond(phone){
+        opacity:0;
+        visibility: hidden;
+        display: none;
+        
+    }
+    font-size:17px;
 }
 
 .footer-links{

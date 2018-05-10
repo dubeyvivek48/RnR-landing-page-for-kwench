@@ -1,0 +1,73 @@
+input:focus{
+border: 1px thin $color-primary !important;
+}
+.header{
+    & p{
+        color:$color-light;
+        font-weight: 400;
+        @include respond(phone){
+            font-weight:200;
+            margin: 0 auto !important;
+        }
+    }
+    & h1{
+        font-weight: 600 !important;
+        margin-bottom:3.1rem !important;
+    }
+    & .btn{
+        padding:.7rem 1.5rem;
+        width:10rem;
+        & i{
+            position:relative;
+            font-size: 14px !important;
+            @include respond(tab-port){
+                display:none;                
+            }         
+
+           
+        }
+        &:hover{
+            box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+        }
+    }
+ 
+    
+    & input:placeholder-shown + .form__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem); 
+    }
+    & input {
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid $color-primary !important; 
+        &:invalid {
+            border-bottom: 3px solid $color-danger; 
+        }
+    }
+    }
+      
+      & label{
+        font-size: 1.1rem;
+        font-weight: 600;
+        display: block;
+        transition: all .3s;
+        color:rgb(105, 103, 103);
+      }   
+      
+      & i{
+          font-size: 30px;
+          margin-right:10px;
+          
+          @include respond(tab-port){
+            font-size:1rem;   
+            display:inline;           
+        }  
+      }
+      & p{
+          font-size:23px;
+      }
+}
+

@@ -3,18 +3,22 @@
     margin: 0 auto;
   }
   .card .carousel-item {
-    height: 200px;
+    height: 300px;
     margin-bottom: 10px;
+    @include respond(tab-port){
+      height:350px;
+    }
+    
     
   }
   .card .carousel-caption {
     padding: 0;
     right: 0;
     left: 0;
-    color: #3d3d3d;
+    color: $color-dark-secondary;
   }
   .card .carousel-caption h3 {
-    color: #3d3d3d;
+    color: $color-dark-secondary;
   }
   .card .carousel-caption p {
     line-height: 30px;
@@ -24,28 +28,58 @@
     align-items: center;
   }
   .card .carousel-caption .col-sm-9 {
+
     text-align: left;
+    & .smallest{
+      display:block;
+    }
   }
   .card .carousel-control-prev, .card .carousel-control-next {
-    color: #3d3d3d !important;
+    color: $color-dark-secondary !important;
     opacity: 1 !important;
   }
-  .col-sm-3 img{
-      padding-top:-80px;
-
-  }
-
-  .carousel-caption .row{
-      padding:0 70px;
-  }
-  
   .card {
     border: none !important;
-    
+
   }
   
-  
+  .carousel-caption 
+  {
+    & .small-t{
+      font-size:19px;
+      width: 50%;
+      @include respond(tab-port){      
+        width:75% !important;
+        font-size:14px;
+      }
+    }
+   
+    & i{
+      font-size:3rem !important;
+      display: inline;
+      margin-left:1rem;
+      margin-right:1rem;
+      @include respond(tab-port){
+        font-size:1.7rem !important;
+      }
+    }
+    
+      
+      
+   
+    
 
+
+    & img{
+    width:5rem;
+    height:5rem;
+  }
+  & .smallest{
+    font-size:19px;
+  }
+  
+}
+  
 
 
 
